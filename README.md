@@ -1,16 +1,42 @@
-## Hi there 👋
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Palindrome Checker</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
 
-<!--
-**Tania-Devi/Tania-Devi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h2>Palindrome Checker</h2>
 
-Here are some ideas to get you started:
+<input type="text" id="text" placeholder="Enter text">
+<button onclick="checkPalindrome()">Check</button>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p id="result"></p>
+
+<script>
+function checkPalindrome() {
+  let str = document.getElementById("text").value;
+  let reversed = str.split("").reverse().join("");
+
+  if(str === reversed) {
+    document.getElementById("result").innerText = "Palindrome";
+  } else {
+    document.getElementById("result").innerText = "Not Palindrome";
+  }
+}
+</script>
+
+</body>
+</html>
+```
